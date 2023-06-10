@@ -8,6 +8,7 @@ The purpose of this app is to upskill on the following:
   - next auth
 - tailwind
 - typescript
+- prisma (ORM)
 
 ## Getting Started
 
