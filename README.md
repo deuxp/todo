@@ -1,9 +1,10 @@
 # Simple TODO app
 
-The purpose of this app is to upskill on the following:
+The purpose of this app is to **upskill** on the following:
 
-- New features of Next.js 13
+- New features of **Next.js 13**
   - server components
+  - server actions (experimental)
   - route grouping
   - next auth
 - tailwind
