@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`container font-mono bg-emerald-900 text-2xl text-slate-100 mx-auto p-7 pt-10`}
+        className={`container font-mono bg-emerald-900 text-2xl text-amber-100 mx-auto p-7 pt-10`}
       >
         {children}
       </body>
