@@ -1,4 +1,4 @@
-import "../globals.css";
+import "@/globals.css";
 
 export const metadata = {
   title: "todo slicer",
@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`container mx-auto bg-emerald-500 p-7 pt-10 font-mono text-2xl text-amber-100`}
+        className={`container mx-auto h-screen bg-emerald-500 p-7 pt-10 font-mono text-2xl text-amber-100`}
       >
         {children}
       </body>
