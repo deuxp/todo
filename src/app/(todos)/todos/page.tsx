@@ -12,7 +12,7 @@ export default async function Home() {
         <h1 className="text-5xl">Todos</h1>
 
         <Link
-          href="/new"
+          href="/todos/new"
           className="rounded border border-emerald-300 px-2 py-1 outline-none focus-within:bg-emerald-600 hover:bg-emerald-600"
         >
           New
