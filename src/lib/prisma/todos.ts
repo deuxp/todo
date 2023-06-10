@@ -13,6 +13,12 @@ export async function getTodos() {
   return await prisma.todo.findMany();
 }
 
+export async function getTodo(id: string) {
+  if (!id) return await prisma.todo.findMany();
+
+  return await prisma.todo.findUnique({ where: { id } });
+}
+
 /**
  * Persist the checked box status. Caveat: when you pass a server function around by reference,
  * you cannot call any redirects from within the function.

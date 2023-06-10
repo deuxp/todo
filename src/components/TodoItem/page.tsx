@@ -1,10 +1,12 @@
+"use client";
+import Link from "next/link";
+
 // we are using client here because this component uses an event handler
 // client side render
 // there is client interaction although no reactiveness is occuring in here
 // Note: by default all the pages are server components
 // you must declare when a component is reactive or has any kind of listeners
 
-"use client";
 import React from "react";
 
 type todoItemProps = {
@@ -31,6 +33,7 @@ function TodoItem({ id, title, complete, toggleTodo }: todoItemProps) {
       >
         {title}
       </label>
+      <Link href={`/todos/${id}`}>.. more</Link>
     </li>
   );
 }
