@@ -29,7 +29,7 @@ export async function getTodo(id: string) {
  * @async prisma needs to await
  * @param {string} id
  * @param {boolean} complete
- * @returns {undefined}
+ * @returns {Promise}
  */
 export async function toggleTodo(id: string, complete: boolean) {
   "use server";

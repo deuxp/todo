@@ -17,24 +17,28 @@ type todoItemProps = {
   toggleTodo: (id: string, complete: boolean) => void;
 };
 
-function TodoItem({ id, title, complete, toggleTodo }: todoItemProps) {
+async function TodoItem({ id, title, complete, toggleTodo }: todoItemProps) {
   return (
-    <li className="flex items-center gap-1">
-      <input
-        type="checkbox"
-        id={id}
-        className="peer cursor-pointer"
-        defaultChecked={complete}
-        onChange={e => toggleTodo(id, e.target.checked)}
-      />
-      <label
-        htmlFor={id}
-        className="cursor-pointer peer-checked:text-emerald-950 peer-checked:line-through"
-      >
-        {title}
-      </label>
-      <Link href={`/todos/${id}`}>.. more</Link>
-    </li>
+    <>
+      <li className="flex items-center gap-1">
+        <input
+          type="checkbox"
+          id={id}
+          className="peer cursor-pointer"
+          defaultChecked={complete}
+          onChange={e => toggleTodo(id, e.target.checked)}
+        />
+        <label
+          htmlFor={id}
+          className="cursor-pointer peer-checked:text-emerald-950 peer-checked:line-through"
+        >
+          {title}
+        </label>
+        <Link prefetch={false} className="text-sm" href={`/todos/${id}`}>
+          .. more
+        </Link>
+      </li>
+    </>
   );
 }
 

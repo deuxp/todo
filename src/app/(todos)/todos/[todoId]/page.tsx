@@ -5,17 +5,22 @@ type routeParams = {
   params: { todoId: string };
 };
 
+type todo = {
+  title: string;
+  complete: boolean;
+};
+
 async function TodoView({ params }: routeParams) {
   const { todoId } = params;
 
-  const todo = await getTodo(todoId);
-
-  console.log({ todo });
+  // use as any for deconstructing properties:
+  // TODO: find better way to get rid of type warning
+  const { complete, title } = (await getTodo(todoId)) as any;
 
   return (
     <div>
-      <h1 className="pb-8 text-5xl">{todo?.title}</h1>
-      <p>Status: {todo?.complete ? "complete" : "active"}</p>
+      <h1 className="pb-8 text-5xl">{title}</h1>
+      <p>Status: {complete ? "complete" : "active"}</p>
       <Link
         className="cursor-pointer, text-sm hover:text-red-400"
         href={"/todos"}
