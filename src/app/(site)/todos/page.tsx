@@ -1,7 +1,7 @@
 import "@/globals.css"; // import tailwind
 import Link from "next/link";
 import { getTodos, toggleTodo } from "../../../lib/prisma/todos";
-import TodoItem from "@/components/TodoItem/page";
+import TodoItem from "@/components/Todo/TodoItem/page";
 
 export default async function Home() {
   const todos = await getTodos();

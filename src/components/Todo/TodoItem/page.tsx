@@ -17,7 +17,7 @@ type todoItemProps = {
   toggleTodo: (id: string, complete: boolean) => void;
 };
 
-async function TodoItem({ id, title, complete, toggleTodo }: todoItemProps) {
+function TodoItem({ id, title, complete, toggleTodo }: todoItemProps) {
   return (
     <>
       <li className="flex items-center gap-1">
