@@ -20,9 +20,11 @@ async function TodoView({ params }: routeParams) {
   return (
     <div>
       <h1 className="pb-8 text-5xl">{title}</h1>
-      <p>Status: {complete ? "complete" : "active"}</p>
+      <p className="text-blue-400">
+        Status: {complete ? "complete" : "active"}
+      </p>
       <Link
-        className="cursor-pointer, text-sm hover:text-red-400"
+        className="cursor-pointer, text-sm text-teal-500 hover:text-red-400"
         href={"/todos"}
       >
         .. back{" "}
